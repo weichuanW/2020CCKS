@@ -35,6 +35,25 @@ to:
 Did the agent finish through a correct, safe, efficient, explainable, reproducible, and reusable path?
 ```
 
+## Industry Addendum
+
+This note is complemented by an industry-focused survey:
+
+- [Industry view: Agent trajectory / trace evaluation](industry-agent-trajectory-evaluation.md)
+
+That addendum focuses on how production teams operationalize trajectory evaluation with LangSmith, OpenAI Agents, Anthropic eval methodology, Braintrust, W&B Weave, Arize Phoenix/OpenInference, Langfuse, HoneyHive, Humanloop, DeepEval, Ragas, LlamaIndex, AutoGen, Patronus AI, Helicone, and AgentOps.
+
+The main industry pattern is:
+
+```text
+OpenTelemetry/OpenInference tracing
+  -> offline golden eval and CI gate
+  -> online async scoring and monitoring
+  -> human annotation and judge calibration
+  -> failed-trace regression set
+  -> prompt/tool/agent/memory/skill optimization
+```
+
 ---
 
 ## 1. Agentic Evaluation and Trajectory Evaluation
